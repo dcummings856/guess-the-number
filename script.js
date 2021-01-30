@@ -1,13 +1,12 @@
-const button = document.querySelector('button')
-const input = document.querySelector('input')
-
-button.addEventListener('click', returnNumber)
+document.querySelector('button').addEventListener('click', returnNumber)
 
 function returnNumber() {
-  let random = Math.floor(Math.random() * 100)
+  let random = Math.floor(Math.random() * 10)
+  let input = document.querySelector('input')
+  console.log(random)
   if (input.value === random) {
-    document.querySelector('h2').innerText ='YOU GUESS THE RIGHT NUMBER'
+    document.querySelector('h2').innerText ='YOU GUESSED THE RIGHT NUMBER!'
   } else {
-    document.querySelector('h2').innerText = 'Try again.'
+    document.querySelector('h2').innerText = 'TRY AGAIN.'
   }
 }
